@@ -1,0 +1,30 @@
+!DOCTYPE html
+html
+head
+    titleConsulta de Examestitle
+    script
+        function buscarExame() {
+            const cpf = document.getElementById(cpf).value.trim();
+            const baseUrl = httpsdrive.google.comfiled;  Troque pelo ID base da sua pasta.
+
+            if (cpf) {
+                 Monte o link com o CPF digitado
+                const link = `${baseUrl}${cpf}.pdf`;
+                 Exibe o link ou redireciona o usuário
+                document.getElementById(resultado).innerHTML = `
+                    a href=${link} target=_blankClique aqui para acessar seu examea
+                `;
+            } else {
+                document.getElementById(resultado).innerText = Por favor, insira um CPF válido.;
+            }
+        }
+    script
+head
+body
+    h1Consulta de Examesh1
+    pDigite o seu CPF para acessar o examep
+    input type=text id=cpf placeholder=Digite seu CPF
+    button onclick=buscarExame()Buscarbutton
+    div id=resultado style=margin-top 20px;div
+body
+html
